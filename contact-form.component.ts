@@ -14,10 +14,10 @@ export class ContactFormComponent {
       form.resetForm();
       this.successMessage = 'Envio exitoso';
       
-      // Ocultar el mensaje después de unos segundos
+      // Ocultar mensaje
       setTimeout(() => {
         this.successMessage = null;
-      }, 3000); // El mensaje desaparecerá después de 3 segundos
+      }, 3000);
     }
   }
 }
