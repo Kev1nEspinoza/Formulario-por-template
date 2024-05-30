@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <h2>Contacto</h2>
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" ngModel required>
+    </div>
+    <div>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" ngModel required>
+    </div>
+    <div>
+        <label for="telefono">Número de teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" ngModel required>
+    </div>
+    <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" ngModel required></textarea>
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+<div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+</div>
